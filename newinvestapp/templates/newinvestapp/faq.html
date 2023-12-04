@@ -1,0 +1,443 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+
+<!-- Mirrored from perfect-coins.ltd/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Sep 2021 20:07:13 GMT -->
+<head>
+    <title>Asset Arbor</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'Loader_img.png' %}" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;Ubuntu:400,500,700" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'perfect-coins.ltd/css/bootstrap.min.css' %}">
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'perfect-coins.ltd/css/magnific-popup/magnific-popup.css' %}" />
+    <!-- owl-carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'perfect-coins.ltd/css/owl-carousel/owl.carousel.css' %}" />
+    <!-- Animate CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'perfect-coins.ltd/css/animate.css' %}" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="{% static 'perfect-coins.ltd/css/font-awesome.css' %}" />
+    <!-- Ionicons CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'perfect-coins.ltd/css/ionicons.min.css' %}">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'perfect-coins.ltd/css/flaticon.css' %}">
+    <!-- Shop CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'perfect-coins.ltd/css/shop.css' %}">
+    <!-- REVOLUTION STYLE SHEETS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'perfect-coins.ltd/revslider/css/settings.css' %}">
+    <!-- style CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'perfect-coins.ltd/css/style.css' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'perfect-coins.ltd/css/responsive.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'perfect-coins.ltd/css/custom.css' %}">
+
+
+     <!-- GetButton.io widget -->
+    <script type="text/javascript">
+        // (function () {
+        //     var options = {
+        //         whatsapp: "+13094666789 ", // WhatsApp number
+        //         call_to_action: "Message us", // Call to action
+        //         position: "left", // Position may be 'right' or 'left'
+        //     };
+        //     var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+        //     var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        //     s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        //     var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        // })();
+    </script>
+    <!-- /GetButton.io widget -->
+
+</head>
+<body>
+
+    <!-- loading -->
+    <div id="loading">
+        <div id="loading-center">
+            <img src="{% static 'Loader_img.png' %}" alt="loader">
+        </div>
+    </div>
+    <!-- loading End -->
+
+    <!-- Header -->
+    <header class="transparent">
+        <div class="topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="topbar-left">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-envelope-o"> </i>support@AssetArbor.org</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="topbar-right text-right">
+                            <!--<ul class="list-inline">-->
+                            <!--    <li class="list-inline-item">-->
+                            <!--        <ul class="list-inline iq-left">-->
+                            <!--            <li class="list-inline-item"><a href="?a=login" data-toggle="modal" data-target=".iq-login" data-whatever="@mdo"><i class="fa fa-lock"></i>Login</a></li>-->
+                            <!--            <li class="list-inline-item"><a href="?a=signup" data-toggle="modal" data-target=".iq-register" data-whatever="@fat"><i class="fa fa-user"></i>Register</a></li>-->
+                            <!--        </ul>-->
+                            <!--    </li>-->
+                            <!--</ul>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="iq-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="logo">
+                            <a href="{% url 'home' %}"><img id="logo_img" id="logo_img" class="img-fluid" src="{% static 'lionhead.png' %}" alt="logo"></a>
+                        </div>
+                        <nav> <a id="resp-menu" class="responsive-menu" href="javascript:void(0)"><i class="fa fa-reorder"></i> Menu</a>
+                            <ul class="menu text-right">
+
+                                <li><a class="" href="{% url 'home' %}">HOME</a></li>
+
+                                <li><a class="" href="{% url 'about' %}">ABOUT US</a></li>
+
+                                <li><a class="" href="{% url 'affiliate' %}">AFFILIATES</a></li>
+
+
+                                <li><a class="" href="{% url 'faq' %}">FAQs</a></li>
+
+                                <li><a class="" href="{% url 'realestate' %}">Real Estate</a></li>
+
+                                <li><a class="" href="{% url 'crypto' %}">Cryptocurrency</a></li>
+
+                                <li><a class="" href="{% url 'forex' %}">Forex</a></li>
+
+                                <li><a class="" href="{% url 'agriculture' %}">Agriculture</a></li>
+
+                                <li><a class="" href="{% url 'retirement' %}">Retirement</a></li>
+
+                                <li><a class="" href="{% url 'oil&gas' %}">oil&gas</a></li>
+
+
+                                <li><a class="" href="{% url 'stocks' %}">Stocks</a></li>
+
+                                {% if request.user.is_authenticated %}
+                                <li><a class="" href="{% url 'logout' %}">Logout</a></li>
+
+                                <li><a class="" href="{% url 'dashboard' %}">Dashboard</a></li>
+
+                                {% else %}
+                                <li><a class="" href="{% url 'signup' %}">SIGN UP</a></li>
+
+                                <li><a class="" href="{% url 'signin' %}">LOGIN</a></li>
+                                {% endif %}
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>    <!-- Header End -->
+    <div class="clearfix"></div>
+    <!--======= Breadcrumb Inner Page =======-->
+    <section class="iq-bg iq-bg-fixed iq-over-black-70 jarallax iq-breadcrumb text-center iq-font-white" style="background-image: url('/static/perfect-coins.ltd/images/bg/bg-2.jpg'); background-position: center center;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="heading-title iq-mb-25">
+                        <h3 class="title text-uppercase iq-font-white iq-tw-6">Frequently Asked Questions</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">FAQs</li>
+            </ol>
+        </nav>
+    </section>
+    <!--======= Breadcrumb Inner Page =======-->
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <section class="iq-tab iq-hori-tab overview-block-ptb">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-bitcoin" role="tabpanel" aria-labelledby="pills-bitcoin-tab">
+
+                                <div style="border: 2px solid #ebb112; padding: 10px;">
+                                    <h6>1. How To Get Started:</h6>
+                                    <p style="color: #fff; font-size: 14px;">
+                                        Create a free account. Click <a href="{% url 'home' %}" style="color: blue;">here</a> to sign up. Fund your account with your perfered crypto currency or card payment.
+                                    </p>
+                                </div>
+                                <br>
+                                <div style="border: 2px solid #ebb112; padding: 10px;">
+                                    <h6>2. What is Asset Arbor and how does it work:</h6>
+                                    <p style="color: #fff; font-size: 14px;">
+                                        Create a free account. Click here to sign up. Fund your account with your perfered crypto currency or card payment, and you're an investor with Asset Arbor.
+                                    </p>
+                                </div>
+                                <br>
+
+                                <div style="border: 2px solid #ebb112; padding: 10px;">
+                                    <h6>4. How to invest:</h6>
+                                    <p style="color: #fff; font-size: 14px;">
+                                        Create a free account. Click here to sign up. Fund your account with your card or perfered crypto currency.
+                                    </p>
+                                </div>
+                                <br>
+                                <div style="border: 2px solid #ebb112; padding: 10px;">
+                                    <h6>6. Can I re-invest my earnings:</h6>
+                                    <p style="color: #fff; font-size: 14px;">
+                                        Yes, we support re-investmet on all our investment plans.
+                                    </p>
+                                </div>
+                                <br>
+                                <div style="border: 2px solid #ebb112; padding: 10px;">
+                                    <h6>7. Are there any withdrawal fees:</h6>
+                                    <p style="color: #fff; font-size: 14px;">
+                                        No, we pay all withdrawals in full and we have no hidden fee!
+                                    </p>
+                                </div>
+                                <br>
+                                <div style="border: 2px solid #ebb112; padding: 10px;">
+                                    <h6>8. Can I have multiple accounts:</h6>
+                                    <p style="color: #fff; font-size: 14px;">
+                                        To avoid immediate account suspension, our platform does not support creating multuple account.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- col-lg-12 End -->
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <!-- Main Content End -->
+
+     <footer class="iq-footer" id="footer">
+    <div class="footer-top iq-bg iq-bg-fixed iq-over-black-80" style="background-image:url('/static/images/bg/bg-13.jpg'); ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3  iq-mtb-60">
+                    <div class="logo">
+                        <img id="logo_img_2" class="img-fluid" src="{% static 'Loader_img.png' %}" alt="# ">
+                        <div class="iq-font-white iq-mt-15 ">We are a transparent and vision driven company, we make your investment experience the best one.</div>
+                    </div>
+                </div>
+
+                <div class="col-md-3  iq-mtb-60 footer-menu">
+                    <h5 class="small-title iq-tw-5 iq-font-white">Menu</h5>
+                    <ul class="iq-pl-0">
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}">About Us</a></li>
+                        <li><a href="{% url 'faq' %}">Faq</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3  iq-mtb-60 footer-menu">
+                    <h5 class="small-title iq-tw-5 iq-font-white">Menu</h5>
+                    <ul class="iq-pl-0">
+                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                        <li><a href="{% url 'signin' %}">Login</a></li>
+                        <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 iq-contact iq-mtb-60">
+                    <h5 class="small-title iq-tw-5 iq-font-white">Contact Us</h5>
+                    <!--<div class="iq-mb-30">-->
+                    <!--    <div class="blog"><i class="fa fa-whatsapp text-blue"></i>-->
+                    <!--        <div class="content ">-->
+                    <!--            <div class="iq-tw-6 title ">Whatsapp</div> +13094666789-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                    <div class="iq-mb-30">
+                        <div class="blog "><i class="ion-ios-email-outline"></i>
+                            <div class="content ">
+                                <div class="iq-tw-6 title ">Mail</div> support@AssetArbor.org
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog"><i class="ion-ios-location-outline"></i>
+                        <div class="content ">
+                            <div class="iq-tw-6 title ">Address</div>Embark Group LTD, &th floor, 100 Cannon st, London EC4N 6EU, United Kingdom
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom iq-ptb-20 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="iq-copyright iq-mt-10 iq-font-white">Copyright <span id="copyright">
+                            <script>
+                                document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+
+                            </script>
+                        </span> <a href="{% url 'home' %}">Asset Arbor</a> All Rights Reserved </div>
+                </div>
+                <div class="col-sm-6">
+                    <ul class="iq-media-blog ">
+                        <li><a href="# "><i class="fa fa-twitter "></i></a></li>
+                        <li><a href="# "><i class="fa fa-facebook "></i></a></li>
+                        <li><a href="# "><i class="fa fa-google "></i></a></li>
+                        <li><a href="# "><i class="fa fa-github "></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="" style="position: fixed; left: 0; bottom: 0; width: 100%; text-align: center; height: 40px; display: flex;">
+    <p style="flex: 0.90;"></p>
+    <script src="{% static 'widgets.coingecko.com/coingecko-coin-price-marquee-widget.js' %}"></script>
+    <coingecko-coin-price-marquee-widget coin-ids="bitcoin,ethereum,eos,ripple,litecoin" currency="usd" background-color="#ebb112" locale="en"></coingecko-coin-price-marquee-widget>
+</div>
+
+    <!-- back-to-top -->
+    <div id="back-to-top">
+        <a class="top" id="top" href="#top"> <i class="ion-ios-upload-outline"></i> </a>
+    </div>
+    <!-- back-to-top End -->
+    <!-- style-customizer END -->
+    <!-- jquery-min JavaScript -->
+    <script src="{% static 'perfect-coins.ltd/js/jquery-min.js' %}"></script>
+    <!-- popper JavaScript -->
+    <script src="{% static 'perfect-coins.ltd/js/popper.min.js' %}"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="{% static 'perfect-coins.ltd/js/bootstrap.min.js' %}"></script>
+    <!-- Bitcoin widget JavaScript -->
+    <script src="{% static 'perfect-coins.ltd/js/widget.js' %}"></script>
+    <!-- All-plugins JavaScript -->
+    <script src="{% static 'perfect-coins.ltd/js/all-plugins.js' %}"></script>
+    <!-- particles JavaScript -->
+    <script src="{% static 'perfect-coins.ltd/js/particles.js' %}"></script>
+
+
+
+
+    <!-- REVOLUTION JS FILES -->
+    <script src="{% static 'perfect-coins.ltd/revslider/js/jquery.themepunch.tools.min.js' %}"></script>
+    <script src="{% static 'perfect-coins.ltd/revslider/js/jquery.themepunch.revolution.min.js' %}"></script>
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script src="{% static 'perfect-coins.ltd/revslider/js/extensions/revolution.extension.actions.min.js' %}"></script>
+    <script src="{% static 'perfect-coins.ltd/revslider/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+    <script src="{% static 'perfect-coins.ltd/revslider/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+    <script src="{% static 'perfect-coins.ltd/revslider/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+    <script src="{% static 'perfect-coins.ltd/revslider/js/extensions/revolution.extension.migration.min.js' %}"></script>
+    <script src="{% static 'perfect-coins.ltd/revslider/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+    <script src="{% static 'perfect-coins.ltd/revslider/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+    <script src="{% static 'perfect-coins.ltd/revslider/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+    <script src="{% static 'perfect-coins.ltd/revslider/js/extensions/revolution.extension.video.min.js' %}"></script>
+    <!-- Custom JavaScript -->
+    <script src="{% static 'perfect-coins.ltd/js/custom.js' %}"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script>
+        var revapi2,
+            tpj = jQuery;
+        tpj(document).ready(function() {
+            if (tpj("#rev_slider_2_1").revolution == undefined) {
+                revslider_showDoubleJqueryError("#rev_slider_2_1");
+            } else {
+                revapi2 = tpj("#rev_slider_2_1").show().revolution({
+                    sliderType: "standard",
+                    jsFileLocation: "//localhost/revslider-standalone/revslider/public/assets/js/",
+                    sliderLayout: "fullwidth",
+                    dottedOverlay: "none",
+                    delay: 9000,
+                    navigation: {
+                        keyboardNavigation: "off",
+                        keyboard_direction: "horizontal",
+                        mouseScrollNavigation: "off",
+                        mouseScrollReverse: "default",
+                        onHoverStop: "off",
+                        arrows: {
+                            style: "persephone",
+                            enable: true,
+                            hide_onmobile: false,
+                            hide_onleave: false,
+                            tmp: '',
+                            left: {
+                                h_align: "left",
+                                v_align: "center",
+                                h_offset: 20,
+                                v_offset: 0
+                            },
+                            right: {
+                                h_align: "right",
+                                v_align: "center",
+                                h_offset: 20,
+                                v_offset: 0
+                            }
+                        }
+                    },
+                    visibilityLevels: [1240, 1024, 778, 480],
+                    gridwidth: 1170,
+                    gridheight: 790,
+                    lazyType: "none",
+                    parallax: {
+                        type: "mouse",
+                        origo: "enterpoint",
+                        speed: 400,
+                        speedbg: 0,
+                        speedls: 0,
+                        levels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 47, 48, 49, 50, 51, 55],
+                    },
+                    shadow: 0,
+                    spinner: "spinner0",
+                    stopLoop: "off",
+                    stopAfterLoops: -1,
+                    stopAtSlide: -1,
+                    shuffle: "off",
+                    autoHeight: "off",
+                    disableProgressBar: "on",
+                    hideThumbsOnMobile: "off",
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    debugMode: false,
+                    fallbacks: {
+                        simplifyAll: "off",
+                        nextSlideOnWindowFocus: "off",
+                        disableFocusListener: false,
+                    }
+                });
+            }
+        }); /*ready*/
+
+    </script>
+
+</body>
+
+
+<!-- Mirrored from perfect-coins.ltd/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Sep 2021 20:07:13 GMT -->
+</html>

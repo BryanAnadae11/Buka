@@ -1,0 +1,286 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx" class="js">
+
+<head>
+    <base href="../">
+    <meta charset="utf-8">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <!-- Fav Icon  -->
+    <link rel="icon" href="{% static 'temp/favicon.png' %}">
+    <!-- Page Title  -->
+    <title>Rexon-Capital - Referral</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!-- StyleSheets  -->
+    <link rel="stylesheet" href="{% static 'dash/dashlite.css' %}">
+    <link id="skin-default" rel="stylesheet" href="{% static 'dash/theme.css' %}">
+    <!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '10c8918e902eaf286069b0d75f0db3cb3d10a5c7';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+</head>
+
+<body class="nk-body bg-lighter npc-default has-sidebar ">
+<div class="nk-app-root">
+    <!-- main @s  -->
+    <div class="nk-main ">
+        <!-- sidebar @s  -->
+        <div class="nk-sidebar nk-sidebar-fixed is-dark " data-content="sidebarMenu">
+            <div class="nk-sidebar-element nk-sidebar-head">
+                <div class="nk-sidebar-brand">
+                    <a href="http://www.assetfussion.org/" class="logo-link nk-sidebar-logo">
+                        <img src="{% static 'lionhead.png' %}" style="height: 35px">
+                    </a>
+                </div>
+                <div class="nk-menu-trigger mr-n2">
+                    <a href="#" class="nk-nav-toggle nk-quick-nav-icon d-xl-none" data-target="sidebarMenu"><em class="glyphicon glyphicon-home"></em></a>
+                    <a href="#" class="nk-nav-compact nk-quick-nav-icon d-none d-xl-inline-flex" data-target="sidebarMenu"><em class="glyphicon glyphicon-align-justify"></em></a>
+                </div>
+            </div><!-- .nk-sidebar-element -->
+            <div class="nk-sidebar-element">
+                <div class="nk-sidebar-content">
+                    <div class="nk-sidebar-menu" data-simplebar>
+                        <ul class="nk-menu">
+                            <li class="nk-menu-heading">
+                                <h6 class="overline-title text-primary-alt">Member Account</h6>
+                            </li><!-- .nk-menu-item -->
+                            <li class="nk-menu-item">
+                                <a href="{% url 'dashboard' %}" class="nk-menu-link">
+                                    <span class="nk-menu-icon"><em class="glyphicon glyphicon-home"></em></span>
+                                    <span class="nk-menu-text">Dashboard</span>
+                                </a>
+                            </li><!-- .nk-menu-item -->
+                            <li class="nk-menu-item">
+                                <a href="{% url 'myreferals' %}" class="nk-menu-link">
+                                    <span class="nk-menu-icon"><em class="glyphicon glyphicon-user"></em></span>
+                                    <span class="nk-menu-text">Affiliate</span>
+                                </a>
+                            </li><!-- .nk-menu-item -->
+                            <li class="nk-menu-heading">
+                                <h6 class="overline-title text-primary-alt">Finance</h6>
+                            </li><!-- .nk-menu-item -->
+                            <li class="nk-menu-item">
+                                <a href="{% url 'deposit' %}" class="nk-menu-link">
+                                    <span class="nk-menu-icon"><em class="glyphicon glyphicon-usd"></em></span>
+                                    <span class="nk-menu-text">Deposit</span>
+                                </a>
+                            </li><!-- .nk-menu-item -->
+                            <li class="nk-menu-item">
+                                <a href="{% url 'withdrawal' %}" class="nk-menu-link">
+                                    <span class="nk-menu-icon"><em class="glyphicon glyphicon-credit-card"></em></span>
+                                    <span class="nk-menu-text">Withdrawal</span>
+                                </a>
+                            </li><!-- .nk-menu-item -->
+                            <li class="nk-menu-heading">
+                                <h6 class="overline-title text-primary-alt">Settings</h6>
+                            </li><!-- .nk-menu-item -->
+                            <li class="nk-menu-item has-sub">
+                                <a href="{% url 'account_settings' %}" class="nk-menu-link">
+                                    <span class="nk-menu-icon"><em class="glyphicon glyphicon-wrench"></em></span>
+                                    <span class="nk-menu-text">Account Settings</span>
+                                </a>
+                            </li><!-- .nk-menu-item -->
+                            <li class="nk-menu-item has-sub">
+                                <a href="{% url 'logout' %}" class="nk-menu-link">
+                                    <span class="nk-menu-icon"><em class="glyphicon glyphicon-off"></em></span>
+                                    <span class="nk-menu-text">Logout</span>
+                                </a>
+                            </li><!-- .nk-menu-item -->
+                        </ul><!-- .nk-menu -->
+                    </div><!-- .nk-sidebar-menu -->
+                </div><!-- .nk-sidebar-content -->
+            </div><!-- .nk-sidebar-element -->
+        </div>
+        <!-- sidebar @e  -->
+        <!-- wrap @s  -->
+        <div class="nk-wrap ">
+            <!-- main header @s  -->
+            <div class="nk-header nk-header-fixed is-light">
+                <div class="container-fluid">
+                    <div class="nk-header-wrap">
+                        <div class="nk-menu-trigger d-xl-none ml-n1">
+                            <a href="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu"><em class="glyphicon glyphicon-align-justify"></em></a>
+                        </div>
+                        <div class="nk-header-brand d-xl-none">
+                            <a href="{% url 'dashboard' %}" class="logo-link">
+                                <img src="{% static 'temp/wp-content/uploads/sites/56/elementor/thumbs/Logo_kingsley-pav84691l3e18xsnqfyms4qi1fvqctrqy1gtofk740.png' %}" style="height: 35px">
+                            </a>
+                        </div><!-- .nk-header-brand -->
+                        <div class="nk-header-tools">
+                            <ul class="nk-quick-nav">
+                                <li class="dropdown user-dropdown">
+                                    <a href="#" class="dropdown-toggle mr-n1" data-toggle="dropdown">
+                                        <div class="user-toggle">
+                                            <div class="user-avatar sm">
+                                                <em class="glyphicon glyphicon-user"></em>
+                                            </div>
+                                            <div class="user-info d-none d-xl-block">
+                                                                                                <div class="user-name dropdown-indicator">{{request.user.username}}</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-md dropdown-menu-right">
+                                        <div class="dropdown-inner user-card-wrap bg-lighter d-none d-md-block">
+                                            <div class="user-card">
+                                                <div class="user-avatar">
+                                                    <span><em class="glyphicon glyphicon-user"></em></span>
+                                                </div>
+                                                <div class="user-info">
+                                                    <span class="lead-text">{{request.user.username}}</span>
+                                                    <span class="sub-text">{{request.user.email}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-inner">
+                                            <ul class="link-list">
+                                                <li><a href="{% url 'account_settings' %}"><em class="glyphicon glyphicon-user"></em><span>View Profile</span></a></li>
+                                                <li><a href="{% url 'deposit' %}"><em class="glyphicon glyphicon-usd"></em><span>Deposit</span></a></li>
+                                                <li><a href="{% url 'withdrawal' %}"><em class="glyphicon glyphicon-credit-card"></em><span>Withdraw</span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="dropdown-inner">
+                                            <ul class="link-list">
+                                                <li><a href="{% url 'logout' %}"><em class="icon ni ni-signout"></em><span>Sign out</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!-- .nk-header-wrap -->
+                </div><!-- .container-fliud -->
+            </div>
+            <!-- main header @e  -->
+            <!-- content @s  -->
+                <div class="nk-content ">
+        <div class="container-fluid">
+            <div class="nk-content-inner">
+                <div class="nk-content-body">
+                    <div class="components-preview wide-md mx-auto">
+                        <div class="nk-block-head nk-block-head-lg wide-sm">
+                            <div class="nk-block-head-content">
+                                <div class="nk-block-head-sub"><a class="back-to" href="{% url 'dashboard' %}"><em class="icon ni ni-arrow-left"></em><span>Dashboard</span></a></div>
+                                <h2 class="nk-block-title fw-normal">Referral</h2>
+                                <p>Grow your Asset Fussion network by inviting your friends and family to join you. This is not compulsory but it's still a good way to earn</p>
+                                <div class="nk-block-des">
+                                    <p class="lead"></p>
+                                </div>
+                            </div>
+                        </div><!-- .nk-block -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="mb-5">
+                                    <table class="datatable-init table" id="example1">
+                                        <thead>
+                                        <tr>
+                                            <th>Username</th>
+                                            <th>Email</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                {% if ref_info %}
+                                                    {% for p in ref_info %}
+
+                                                    <td>{{p.user.username}}</td>
+                                                    <td>{{p.user.email}}</td>
+
+                                                    {% endfor %}
+
+                                                {% else %}
+                                                    <td><span>You have no referrals yet.</span></td>
+                                                    <td><span>You have no referrals yet.</span></td>
+
+                                                {% endif %}
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                        <tr>
+                                        </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- .components-preview -->
+                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-29fc0be ob-is-e3" data-id="29fc0be" data-element_type="column" data-settings="{&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                                    <div class="elementor-widget-wrap elementor-element-populated">
+                                        <div class="elementor-element elementor-element-b6386cd ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="b6386cd" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                            <div class="elementor-widget-container">
+                                                <h4 class="elementor-heading-title elementor-size-default">Language
+                                                </h4>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-0361105 ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="0361105" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                            <div class="elementor-widget-container">
+                            <span class="elementor-heading-title elementor-size-default">We support your local languages. Change language below.
+                            </span>
+                                            </div>
+                                        </div>
+
+<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                                    </div>
+                                </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        ;(function($) {
+            'use strict'
+            $(function() {
+                $('#example1').DataTable({
+                    responsive: true,
+                })
+
+                $('#example2').DataTable({
+                    autoWidth: true,
+                    scrollX: true,
+                    fixedColumns: true,
+                })
+
+                $('#example3').DataTable({
+                    autoWidth: true,
+                    scrollX: true,
+                    fixedColumns: true,
+                })
+            })
+        })(jQuery)
+    </script>
+            <!-- content @e  -->
+        </div>
+        <!-- wrap @e  -->
+    </div>
+    <!-- main @e  -->
+</div>
+<!-- app-root @e  -->
+<!-- JavaScript -->
+<script src="{% static 'dash/bundle.js' %}"></script>
+<script src="{% static 'dash/scripts.js' %}"></script>
+<script src="{% static 'dash/chart-ecommerce.js' %}"></script>
+</body>
+
+</html>
